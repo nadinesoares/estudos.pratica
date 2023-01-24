@@ -17,10 +17,18 @@
         padding: 10px;
         text-align: center;
     }
-    th {
+     thead > tr > th {
        color: white;
         background-color: rgb(83, 82, 82);
         
+    }
+    thead > tr > td {
+        color: white;
+        background-color: rgb(83, 82, 82);
+        font-weight: bold;
+    }
+    tbody > tr > th {
+        background-color: white;
     }
     .humanas {
         font-weight: bolder;
@@ -31,19 +39,21 @@
 </head>
 <body>
     <table>
+        <thead>
         <tr>
-            <th rowspan="2">Área</th>
-            <th rowspan="2">Disciplinas</th>
-            <th colspan="2">Notas</th>
-           <th rowspan="2">Média</th> 
+            <th rowspan="2" scope="col">Área</th>
+            <th rowspan="2" scope="col">Disciplinas</th>
+            <th colspan="2" scope="colgroup">Notas</th>
+           <th rowspan="2" scope="col">Média</th> 
            <tr>
-            <th>Nota 1</th>
-            <th>Nota 2</th>
+            <th scope="col">Nota 1</th>
+            <th scope="col">Nota 2</th>
            </tr>
         </tr>
+    </thead>
         <tbody>
             <tr>
-                <td rowspan="4"> <b>Exatas</b> </td>
+                <th rowspan="4" scope="rowgroup"> Exatas </th>
                 <td>Matemática</td>
                 <td>0.0</td>
                 <td>0.0</td>
@@ -68,11 +78,13 @@
                 <td>0.0</td>
             </tr>
             <tr>
-                <th colspan="4">Média de Exatas</th>
-                <th>0.0</th>
+                <thead>
+                <th colspan="4" scope="row">Média de Exatas</th>
+                <td>0.0</td>
             </tr>
+        </thead>
             <tr>
-                <td class="humanas" rowspan="2"> Humanas</td>
+                <th scope="rowgroup" rowspan="2" > Humanas</th>
                 <td>História</td>
                 <td>0.0</td>
                 <td>0.0</td>
@@ -84,10 +96,12 @@
                 <td>0.0</td>
                 <td>0.0</td>
             </tr>
+            <thead>
             <tr>
-                <th colspan="4">Média Humanas</th>
-                <th>0.0</th>
+                <th scope="row" colspan="4">Média Humanas</th>
+                <td>0.0</td>
             </tr>
+        </thead>
         </tbody>
     </table>
 </body>
