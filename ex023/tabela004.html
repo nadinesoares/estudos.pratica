@@ -22,12 +22,29 @@
             padding: 10px;
             text-align: center;
         }
+        col.cnome {
+            background-color: aliceblue;
+        }
+
+        /* col de coluna feito no colgrup */
+        col.cgrupo {
+            background-color:aqua;
+        }
     </style>
 </head>
 <body>
     <h1> Exercicios de Tabelas </h1>
 
     <table>
+        <colgroup>
+            <col class="cnome">
+            <col class="cgrupo" span="2">
+            <!--
+                span para colocar duas ou mais 
+                colunas com a mesma configuração
+            -->
+            <col class="cprof">
+        </colgroup>
         <caption>Cadastro</caption>
         <tr>
             <th scope="col">Nome</th>
