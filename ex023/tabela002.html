@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative; /* cabeçalho fixo, 1º passo*/
             </* A propriedade border-collapse em CSS é usada
  para definir as bordas da célula presente dentro da tabela e diz
  se essas células compartilharão uma borda comum ou não. */
@@ -26,12 +27,22 @@
 #040885
 fff;
         }
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: grey;
+            /* 2º passo cabeçalho fixo*/ 
+        }
         caption {
             font-size: 1.5em;
             font-weight: bold;
             padding: 10px;
             background-color: lightgray;
         }
+        tbody > tr:nth-child(2n) /* no lugar de 2n, odd= impar ou even= par, 3n, 5n, etc... é possivel colocar um tbody impar de uma cor, 
+        e o outro tbody par de outra cor*/ {
+            background-color: lightgray;
+        }  /* tabela zebrada */ 
     </style>
 </head>
 <body>
@@ -78,5 +89,12 @@ fff;
           </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, minima! Velit minus facilis est sed quos sint, 
+        nesciunt consequatur corporis quam nobis eveniet? Quas dignissimos iste similique obcaecati tenetur repudiandae.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab tempora ducimus odit quasi ullam cumque ea enim necessitatibus 
+officiis impedit sint praesentium esse perspiciatis quia, neque rem eligendi fugiat nisi?
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eius quidem, numquam exercitationem quae at minima repellat ex
+ cum culpa nobis mollitia quis iure quos placeat, consectetur illum nostrum amet.
+    </p>
 </body>
 </html>
