@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estudos de Iframe</title>
+    <style>
+        iframe {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    <h1>Testanodo o uso de iframe</h1>
+    <h1>Testando o uso de iframe</h1>
     <p>Acessando o site do <a href="https://www.cursoemvideo.com" 
         target="_blank">CurosemVideo</a> para aprender a progamar</p>
         <!--
@@ -14,15 +21,27 @@
         -->
         <p>Acessando o site do 
 
-           <iframe src="https://www.cursoemvideo.com" frameborder="0"></iframe>
+            <!-- Tamanho padrão do iframe é 300x150 (height)-->
+
+           <iframe src="https://www.cursoemvideo.com" frameborder="0" height="300" scolling="yes"></iframe>
             
+           <!-- Existe os scolling que permite ou não, ou deixa de forma automatica
+        a barra de rolagem no iframe -->
             para aprender a progamar</p>
             <p>
                 o sua casa
 
-                <iframe src="https://www.lucianocardosoimoveis.com" frameborder="0"></iframe>
+                <iframe src="https://www.lucianocardosoimoveis.com" frameborder="0">
+                    <a href="https://www.lucianocardosoimoveis.com">Site Luciano Cardoso Imoveis</a>
+                </iframe>
 
                 aqui
+                <!--
+                    nem todos os navegadores são compativeis
+                    para o iframe, entáo é possivel colocar o
+                    link (a href) dentro do iframe, daí se a pessoa não ver
+                    o iframe ela vê/acessa o link. exemplo acima
+                -->
             </p>
 </body>
 </html>
