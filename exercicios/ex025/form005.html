@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Formuçário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on"></form>
+    <fieldset>
+        <legend>Sexo</legend>
+        <input type="radio" name="sexo" id="isxmas"> <label for="isxmas">Masculino</label>
+        <input type="radio" name="sexo" id="isxfem" checked> <label for="isxfem">Feminino</label>
+    </fieldset>
+    <!-- em radio, colocar o mesmo nome em nome hehe, faz com que
+        alterne entre as seleções, assim ele pode mudar se errar. 
+        checked já deixa preenchido. 
+    -->
+<fieldset>
+    <legend>Esportes favoritos</legend>
+    <input type="checkbox" name="esbas" id="iesbas"> <label for="iesbas">Basquete</label> <br>
+    <input type="checkbox" name="estuf" id="iestuf"> <label for="iestuf">Futebol</label> <br>
+    <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label> <br>
+    <input type="checkbox" name="esten" id="iesten"> <label for="iesten">Tênis</label> <br>
+</fieldset>
+
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </p>
+</body>
+</html>
